@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-kino/static/css/main.b5320759.css",
-    "main.js": "/react-kino/static/js/main.1321a594.js",
+    "main.js": "/react-kino/static/js/main.ec622b33.js",
     "index.html": "/react-kino/index.html",
     "main.b5320759.css.map": "/react-kino/static/css/main.b5320759.css.map",
-    "main.1321a594.js.map": "/react-kino/static/js/main.1321a594.js.map"
+    "main.ec622b33.js.map": "/react-kino/static/js/main.ec622b33.js.map"
   },
   "entrypoints": [
     "static/css/main.b5320759.css",
-    "static/js/main.1321a594.js"
+    "static/js/main.ec622b33.js"
   ]
 }
