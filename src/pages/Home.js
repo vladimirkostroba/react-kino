@@ -22,7 +22,7 @@ const moviesApi = (exportedData) => {
 
 export default function Home(){
 
-    const [movies, setMovies] = useState();
+    const [movies, setMovies] = useState([]);
     // const [isLoading, setIsLoading] = useState(true);
 
  
@@ -34,6 +34,7 @@ export default function Home(){
     },[])
 
     return(
+      
       <MoviesList movies={movies}/>
     )
 }

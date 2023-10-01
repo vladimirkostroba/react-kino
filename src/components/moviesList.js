@@ -4,17 +4,13 @@ import { Link } from "react-router-dom";
 
 
 export default function MoviesList({movies}){
-    
     return(
-        // <ul>
-        //     {movies.map(({title}) => 
-        //         (<li>
-        //             <Link>{title}</Link>
-        //         </li>)
-        //     )}
-        // </ul>
-
-
-             <p>lkdc</p>
+        <ul>
+            {movies.map(({title,name,id}) => 
+                (<li key={id}>
+                    <Link>{title?title:name}</Link>
+                </li>)
+            )}
+        </ul>
         )
 }
