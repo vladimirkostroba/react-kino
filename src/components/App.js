@@ -5,6 +5,7 @@ import Home from "pages/Home";
 import SearchMovies from "pages/SearchMovies";
 import SharedLayout from "./SharedLayout";
 
+
 function App(){
     return(
         <Routes>
