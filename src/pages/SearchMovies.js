@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { useState } from "react";
 import MoviesList from "components/moviesList";
+import { useSearchParams } from "react-router-dom";
   
   
 
@@ -21,18 +22,18 @@ import MoviesList from "components/moviesList";
 
 export default function SearchMovies(){
 
-    const [serchValue, setSearchValue] = useState('');
+    const [searchValue, setSearchValue] = useSearchParams();
     const [movies, setMovies] = useState([]);
+    let movie = searchValue.get("query");
+   
 
     const getMovies = e => {
           e.preventDefault();
 
-          searchMoviesApi(serchValue,setMovies);
-
-          setSearchValue('')
-
-          console.log(movies);
+          searchMoviesApi(movie,setMovies);
     }
+
+    
 
 
     
@@ -43,8 +44,9 @@ export default function SearchMovies(){
        <Fragment>
             <form onSubmit={getMovies}>
          <input
-        value={serchValue}
-        onChange={e=>setSearchValue(e.target.value)}/>
+         
+         value={movie}
+        onChange={e=>setSearchValue({query:e.target.value})}/>
         <button type='submit'>Search</button>
        </form>
 
