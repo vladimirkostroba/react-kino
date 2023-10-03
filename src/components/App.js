@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "pages/Home";
 import SearchMovies from "pages/SearchMovies";
 import SharedLayout from "./SharedLayout";
-
+import MoviesDetails from "pages/MovieDetails";
 
 function App(){
 
@@ -13,6 +13,9 @@ function App(){
          <Route path="/" element={<SharedLayout/>}>
            <Route index element={<Home/>}/>
            <Route path="/searchMovies" element={<SearchMovies />}/>
+         </Route>
+         <Route path="/searchMovies/:id" element={<MoviesDetails/>}>
+
          </Route>
         </Routes>
    )

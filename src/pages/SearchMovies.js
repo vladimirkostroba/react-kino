@@ -31,6 +31,8 @@ export default function SearchMovies(){
           e.preventDefault();
 
           searchMoviesApi(movie,setMovies);
+
+          
     }
 
     
