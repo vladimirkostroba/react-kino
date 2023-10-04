@@ -24,7 +24,9 @@ export default function SearchMovies(){
 
     const [searchValue, setSearchValue] = useSearchParams();
     const [movies, setMovies] = useState([]);
-    let movie = searchValue.get("query");
+    const movie = searchValue.get("query")  ?? ''; // ?? '' разобрать
+
+    
    
 
     const getMovies = e => {
@@ -35,7 +37,12 @@ export default function SearchMovies(){
           
     }
 
+    const updateQueryString = (name) => {
+      const nextParams = name !== '' ? {query:name} : {};
+      setSearchValue(nextParams);
+    }
     
+    // добавить функцию очистки параметра (вебинар 2 , 14 мин)
 
 
     
@@ -48,7 +55,7 @@ export default function SearchMovies(){
          <input
          
          value={movie}
-        onChange={e=>setSearchValue({query:e.target.value})}/>
+        onChange={e=>updateQueryString(e.target.value)}/>
         <button type='submit'>Search</button>
        </form>
 
