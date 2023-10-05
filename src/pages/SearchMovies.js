@@ -24,10 +24,8 @@ export default function SearchMovies(){
 
     const [searchValue, setSearchValue] = useSearchParams();
     const [movies, setMovies] = useState([]);
-    const movie = searchValue.get("query")  ?? ''; // ?? '' разобрать
+    const movie = searchValue.get("query")  ?? ''; 
 
-    
-   
 
     const getMovies = e => {
           e.preventDefault();

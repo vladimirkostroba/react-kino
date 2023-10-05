@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const getCast = (id,getData) => {
@@ -22,9 +22,6 @@ export default function Cast(){
     const [cast, setCast] = useState([]);
 
     useEffect(() => getCast(id,setCast),[id]);
-
-    console.log(cast);
-
 
     return(
         <ul>

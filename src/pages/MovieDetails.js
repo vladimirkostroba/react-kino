@@ -20,7 +20,7 @@ const getMovieDetails = (id,getData) => {
 export default function MoviesDetails(){
     const {id} = useParams();
     const [movie, setMovie] = useState({});
-
+  
 
     useEffect(() => getMovieDetails(id,setMovie),[id])
 
