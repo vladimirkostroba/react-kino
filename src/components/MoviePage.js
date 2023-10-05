@@ -1,9 +1,12 @@
-import React, { Fragment } from "react";
+import { Link, Outlet } from "react-router-dom";
+import Leyout from "./Layout";
 
 export default function MoviePage({movie}){
       return(
-        <Fragment>
+        <Leyout>
+            <Link to="/searchMovies">Back</Link>
             <section>
+            <div>
             <img src={movie.poster_path} alt="img"/>
             <div>
                 <h2>{movie.title? movie.title : movie.name}</h2>
@@ -21,8 +24,23 @@ export default function MoviePage({movie}){
                 
 
             </div>
+            </div>
+
+            <div>
+                <h2>Aditional information</h2>
+                <ul>
+                    <li>
+                        <Link to='cast'>Cast</Link>
+                    </li>
+
+                    <li>
+                        <Link to='reviews'>Reviews</Link>
+                    </li>
+                </ul>
+                <Outlet/>
+            </div>
             </section>
 
-        </Fragment>
+        </Leyout>
       )
 }

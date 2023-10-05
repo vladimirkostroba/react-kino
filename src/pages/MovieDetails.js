@@ -24,9 +24,7 @@ export default function MoviesDetails(){
 
     useEffect(() => getMovieDetails(id,setMovie),[id])
 
-    console.log(movie);
-
-    
+    // console.log(movie);
 
     return(
        <MoviePage movie={movie}/>
