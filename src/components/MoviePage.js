@@ -1,6 +1,8 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Leyout from "./Layout";
 import React , {useRef} from "react";
+import { Suspense } from "react";
+
 
 export default function MoviePage({movie}){
     const location = useLocation();
@@ -42,7 +44,10 @@ export default function MoviePage({movie}){
                         <Link to='reviews'>Reviews</Link>
                     </li>
                 </ul>
-                <Outlet/>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Outlet />
+                </Suspense>
+      
             </div>
             </section>
 
